@@ -55,7 +55,6 @@ zoo-en-poo/
 
 ### Pré-requis
 - Python 3.8 ou supérieur
-- [pipenv](https://pypi.org/project/pipenv/) pour gérer les dépendances
 
 ### Étapes
 
@@ -65,13 +64,7 @@ zoo-en-poo/
    cd zoo-en-poo
    ```
 
-2. Active l'environnement virtuel :
-   ```bash
-   pipenv install
-   pipenv shell
-   ```
-
-3. Lance le script principal :
+2. Lance le script principal :
    ```bash
    python main.py
    ```
