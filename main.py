@@ -50,13 +50,14 @@ def main():
                                     choix_cages = "4"
 
                         if is_animal:
-                            choix_animal = None
                             choix_animal = gestionAnimal()
                             animal = None
                             choix_name = ""
                             while choix_name == "":
                                 choix_name = input("Veuillez entrer un nom : ")
-                            match choix_animal: 
+
+                            # Créer une nouvelle instance pour chaque choix
+                            match choix_animal:
                                 case "1":
                                     animal = Lion(choix_name)
                                 case "2":
@@ -71,7 +72,10 @@ def main():
                                     while choix_espece == "":
                                         choix_espece = input("Veuillez entrer une espece : ")
                                     animal.espece = choix_espece
+
+                            # Ajouter l'animal seulement à la cage spécifiée
                             zoo.cages[int(index_cage)].ajouterUnAnimaux(animal)
+                            print(f"L'animal {choix_name} a été ajouté à la cage numéro {index_cage}")
 
                             
 def gestionDuZoo():
